@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  iost-node:
+    image: iostio/iost-node:3.3.3-dcb3e11
+    hostname: iost-node
+    ports:
+      - 30000-30003:30000-30003
+    volumes:
+      - ./contracts:/workdir/contracts
+      - ./sh:/workdir/sh
+      - ./data/iserver:/var/lib/iserver
+      - ./scripts:/workdir/scripts
+    cap_add:
+      - IPC_LOCK
+    stop_grace_period: 10m
+    
+networks:
+    sample-network:
+      external: true

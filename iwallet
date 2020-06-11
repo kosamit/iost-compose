@@ -1,0 +1,5 @@
+#!/bin/bash
+
+PREFIX="docker-compose exec -w /workdir/contracts iost-node iwallet"
+
+$PREFIX $@

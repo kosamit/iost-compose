@@ -1,0 +1,25 @@
+{
+  "name": "iost-voting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "docker run -d --rm --name iserver -p 30000-30003:30000-30003 iostio/iost-node:3.3.3",
+    "stop": "docker stop iserver",
+    "init": "node script/init.js",
+    "signup": "node script/signup.js",
+    "minify": "node script/minify.js",
+    "compile": "./script/compile.sh",
+    "publish": "node script/publish.js",
+    "update": "node script/update.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kunroku",
+  "license": "MIT",
+  "dependencies": {
+    "@kunroku/iost": "^1.0.3",
+    "@types/iost-contract": "^3.4.0",
+    "log4js": "^6.3.0",
+    "uglify-es": "^3.3.9"
+  }
+}

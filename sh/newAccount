@@ -1,0 +1,8 @@
+#!/bin/bash
+iwallet account create iost-auth \
+ --initial_ram 65536 \
+ --initial_gas_pledge 1000000 \
+ --initial_balance 1000000 \
+ --amount_limit '*:unlimited'\
+ --account admin\
+ --server 127.0.0.1:30002
