@@ -19,7 +19,7 @@
   "dependencies": {
     "@kunroku/iost": "^1.0.3",
     "@types/iost-contract": "^3.4.0",
-    "log4js": "^6.3.0",
+    "log4js": "^6.4.0",
     "uglify-es": "^3.3.9"
   }
 }
